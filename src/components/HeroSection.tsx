@@ -1,4 +1,11 @@
+"use client";
+
+import { useState } from "react";
+import ContactModal from "./ContactModal";
+
 export default function HeroSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center pt-20 overflow-hidden">
       {/* Background Image */}
@@ -39,17 +46,23 @@ export default function HeroSection() {
         </p>
 
         <div className="flex flex-col md:flex-row-reverse gap-6 justify-center items-center">
-          <button className="group relative px-10 py-4 bg-cyan-600 text-white font-headline font-bold rounded-xl overflow-hidden transition-all duration-500 hover:shadow-xl hover:shadow-cyan-200">
+          <button 
+            onClick={() => setIsModalOpen(true)}
+            className="group relative px-10 py-4 bg-cyan-600 text-white font-headline font-bold rounded-xl overflow-hidden transition-all duration-500 hover:shadow-xl hover:shadow-cyan-200"
+          >
             <span className="relative z-10">הזמן בדיקה עכשיו</span>
             <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
           </button>
-          <button className="px-10 py-4 border-2 border-slate-200 hover:border-cyan-400 text-slate-700 font-headline font-bold rounded-xl transition-all duration-300 backdrop-blur-sm bg-white/50">
+          <button 
+            onClick={() => setIsModalOpen(true)}
+            className="px-10 py-4 border-2 border-slate-200 hover:border-cyan-400 text-slate-700 font-headline font-bold rounded-xl transition-all duration-300 backdrop-blur-sm bg-white/50"
+          >
             איך זה עובד?
           </button>
         </div>
       </div>
 
-
+      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 }
