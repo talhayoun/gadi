@@ -62,10 +62,19 @@
 }
 
 /* ─── Base Styles ─── */
+* {
+  max-width: 100%;
+}
+
+html {
+  overflow-x: hidden;
+}
+
 body {
   background-color: var(--color-background);
   color: var(--color-on-background);
   overflow-x: hidden;
+  width: 100%;
 }
 
 .material-symbols-outlined {
@@ -96,4 +105,14 @@ body {
     inset 0 0 10px rgba(0, 229, 255, 0.1),
     0 0 15px rgba(0, 229, 255, 0.05);
   border-color: rgba(0, 229, 255, 0.4);
+}
+
+/* ─── Animations ─── */
+@keyframes dash {
+  0%, 100% {
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dashoffset: 30;
+  }
 }

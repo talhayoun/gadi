@@ -29,7 +29,7 @@ export default function RootLayout({
     <html
       lang="he"
       dir="rtl"
-      className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}
+      className={`${inter.variable} ${spaceGrotesk.variable} antialiased overflow-x-hidden`}
     >
       <head>
         <link
@@ -37,7 +37,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="font-body selection:bg-primary-container selection:text-on-primary-container">
+      <body className="font-body selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden">
         {children}
       </body>
     </html>
