@@ -1,8 +1,6 @@
 "use client";
 
 import { useEffect } from "react";
-import Image from "next/image";
-import logo from "../logo.png"
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -54,13 +52,9 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
         <div className="text-center">
           <div className="mb-6 flex justify-center">
-            <Image
-              src={logo}
-              alt="Matrix-טכנלוגיות"
-              width={180}
-              height={180}
-              className="object-contain mix-blend-multiply"
-            />
+            <span className="text-3xl font-black bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+              Matrix-טכנלוגיות
+            </span>
           </div>
 
           <h3 className="font-headline text-2xl font-bold text-slate-900 mb-4">
@@ -73,7 +67,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
           <a
             href="tel:0505750724"
-            className="inline-block bg-cyan-600 text-white font-headline font-bold px-8 py-4 rounded-xl hover:bg-cyan-700 transition-all duration-300 text-xl mb-4"
+            className="inline-block bg-gradient-to-r from-primary to-primary-container text-white font-headline font-bold px-8 py-4 rounded-full hover:scale-105 transition-all duration-300 text-xl mb-4 shadow-lg shadow-primary/20"
           >
             050-575-0724
           </a>

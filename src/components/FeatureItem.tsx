@@ -13,7 +13,7 @@ export default function FeatureItem({
 }: FeatureItemProps) {
   return (
     <li className="flex flex-row-reverse items-start gap-4">
-      <Icon name={icon} className="text-cyan-600 mt-1" />
+      <Icon name={icon} className="text-primary mt-1" />
       <div>
         <span className="block text-slate-900 font-bold font-headline uppercase tracking-wider text-sm">
           {title}

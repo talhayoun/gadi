@@ -23,63 +23,52 @@ export default function ServiceCard({
 }: ServiceCardProps) {
   if (variant === "large") {
     return (
-      <div className="md:col-span-2 md:row-span-2 glass-panel p-8 rounded-xl border border-outline-variant/20 flex flex-col justify-between group hover:bg-surface-container-high transition-all duration-500 neon-border-hover">
-        <div>
-          <Icon name={icon} className={`${iconColor} mb-6`} size={36} />
-          <h4 className="font-headline text-2xl font-bold text-slate-900 mb-4">
-            {title}
-          </h4>
-          <p className="text-slate-600 leading-relaxed text-lg">
-            {description}
-          </p>
-        </div>
-        {image && (
-          <div className="mt-8">
-            <div className="w-full h-48 rounded-lg overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700">
-              <img
-                alt={imageAlt}
-                className="w-full h-full object-cover"
-                src={image}
-              />
-            </div>
+      <div className="md:col-span-2 group bg-surface p-8 rounded-xl flex flex-col justify-between overflow-hidden relative transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5">
+        <div className="relative z-10">
+          <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+            <Icon name={icon} className="text-3xl" size={30} />
           </div>
-        )}
+          <h3 className="text-2xl font-bold mb-4">{title}</h3>
+          <p className="text-on-surface-variant leading-relaxed max-w-md">{description}</p>
+        </div>
+        <div className="mt-8 flex items-center gap-2 text-primary font-bold cursor-pointer">
+          למידע נוסף
+          <span className="material-symbols-outlined">arrow_left_alt</span>
+        </div>
+        <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-primary/5 rounded-full blur-3xl transition-all group-hover:bg-primary/10"></div>
       </div>
     );
   }
 
   if (variant === "medium") {
     return (
-      <div className="md:col-span-2 glass-panel p-8 rounded-xl border border-outline-variant/20 flex gap-6 items-center group hover:bg-surface-container-high transition-all duration-500 neon-border-hover">
-        <div className="flex-1">
-          <Icon name={icon} className={`${iconColor} mb-4`} size={30} />
-          <h4 className="font-headline text-xl font-bold text-slate-900 mb-2">
-            {title}
-          </h4>
-          <p className="text-sm text-slate-600">{description}</p>
+      <div className="group bg-surface p-8 rounded-xl transition-all duration-500 hover:shadow-2xl hover:-translate-y-1">
+        <div className="w-14 h-14 bg-secondary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+          <Icon name={icon} className="text-3xl" size={30} />
         </div>
-        {sideIcon && (
-          <div className="w-32 h-32 rounded-lg bg-surface-container-highest/50 flex-shrink-0 flex items-center justify-center">
-            <Icon
-              name={sideIcon}
-              className="text-primary/20 group-hover:text-primary transition-all duration-500"
-              size={48}
-              fill
-            />
-          </div>
-        )}
+        <h3 className="text-xl font-bold mb-4">{title}</h3>
+        <p className="text-on-surface-variant text-sm leading-relaxed">{description}</p>
       </div>
     );
   }
 
-  // small variant
+  // small variant (for the second large card with image)
   return (
-    <div className="glass-panel p-8 rounded-xl border border-outline-variant/20 group hover:bg-surface-container-high transition-all duration-500 neon-border-hover">
-      <Icon name={icon} className={`${iconColor} mb-4`} size={30} />
-      <h4 className="font-headline text-lg font-bold text-slate-900 mb-2">
-        {title}
-      </h4>
-      <p className="text-xs text-slate-600">{description}</p>
+    <div className="md:col-span-2 group bg-surface p-8 rounded-xl flex flex-col justify-between overflow-hidden relative transition-all duration-500 hover:shadow-2xl hover:shadow-secondary/5">
+      <div className="relative z-10 flex flex-col md:flex-row gap-8 items-center">
+        <div className="flex-1">
+          <div className="w-14 h-14 bg-secondary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+            <Icon name={icon} className="text-3xl" size={30} />
+          </div>
+          <h3 className="text-2xl font-bold mb-4">{title}</h3>
+          <p className="text-on-surface-variant leading-relaxed">{description}</p>
+        </div>
+        {image && (
+          <div className="w-full md:w-64 rounded-lg overflow-hidden shrink-0 grayscale hover:grayscale-0 transition-all duration-700">
+            <img alt={imageAlt} className="w-full h-48 object-cover" src={image} />
+          </div>
+        )}
+      </div>
     </div>
   );
 }

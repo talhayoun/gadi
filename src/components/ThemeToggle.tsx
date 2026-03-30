@@ -33,7 +33,7 @@ export default function ThemeToggle() {
     <button
       onClick={toggleTheme}
       aria-label={theme === "dark" ? "עבור למצב בהיר" : "עבור למצב כהה"}
-      className="fixed bottom-6 end-6 z-50 w-14 h-14 rounded-full bg-cyan-600 dark:bg-primary-container text-white dark:text-on-primary-container shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group active:scale-95 border-2 border-cyan-500/20 dark:border-primary/20"
+      className="fixed bottom-6 end-6 z-50 w-14 h-14 rounded-full bg-gradient-to-r from-primary to-primary-container text-white shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group active:scale-95 border-2 border-primary/20"
     >
       <div className="relative w-6 h-6">
         <Icon

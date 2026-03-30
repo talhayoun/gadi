@@ -1,119 +1,115 @@
 import Icon from "./Icon";
 
-const platformLinks = [
-  { label: "לוח בקרה חכם", href: "#" },
-  { label: "מאגר נתוני מים v2", href: "#" },
-  { label: "מחשוב קצה לעיריות", href: "#" },
-  { label: "ממשק API קוונטי", href: "#" },
+const navigationLinks = [
+  { label: "עמוד הבית", href: "#" },
+  { label: "אודות", href: "#" },
+  { label: "פרויקטים", href: "#" },
+  { label: "בלוג", href: "#" },
+  { label: "יצירת קשר", href: "#" },
 ];
 
-const legalLinks = [
-  { label: "מדיניות פרטיות", href: "#" },
-  { label: "תנאי שימוש", href: "#" },
-  { label: "סטטוס מערכת", href: "#" },
-  { label: "שאלות נפוצות", href: "#" },
+const servicesLinks = [
+  { label: "יבוש תת רצפתי", href: "#" },
+  { label: "תיקון נזילה – תיקוני אל הרס למיניהם", href: "#" },
+  { label: "איתור נזילה ללא הרס", href: "#" },
+  { label: "איתור נזילות במצלמה תרמית", href: "#" },
+];
+
+const articlesLinks = [
+  { label: "רטיבות קפילארית בקירות ובמרתפים – איך מזהים, מטפלים ומונעים", href: "#" },
+  { label: "איתור נזילה בבריכות ובמזרקות – התחייבות לאיתור מלא", href: "#" },
+  { label: "רטיבות לשכן? איתור נזילות בין דירות ובין קומות עם דוח משפטי", href: "#" },
+  { label: "איתור נזילות במבנים גדולים – פתרונות לוועדי בתים, חניונים ובבנייני מגורים", href: "#" },
+  { label: "ייבוש תת רצפתי", href: "#" },
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-50 border-t border-slate-200 transition-colors duration-300">
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-16 max-w-screen-2xl mx-auto text-right">
-        {/* Logo & Social */}
-        <div className="col-span-1 md:col-span-1">
-          <div className="font-headline font-black text-cyan-700 text-xl mb-6">
-            Matrix-טכנלוגיות
-          </div>
-          <p className="text-slate-500 text-sm leading-relaxed mb-6 font-medium">
-            מובילים את הדור הבא של טכנולוגיית איתור הנזילות. בנוי לביצועים, מאובטח לנצח.
-          </p>
-          <div className="flex flex-row-reverse gap-4">
-            <a
-              className="w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-slate-400 hover:text-cyan-600 transition-colors shadow-sm"
-              href="#"
-            >
-              <Icon name="language" size={14} />
-            </a>
-            <a
-              className="w-10 h-10 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors shadow-sm"
-              href="#"
-            >
-              <Icon name="terminal" size={14} />
-            </a>
-          </div>
-        </div>
-
-        {/* Platforms */}
-        <div>
-          <h5 className="text-slate-900 font-headline font-bold text-sm mb-6">
-            פלטפורמות
-          </h5>
-          <ul className="space-y-4 text-sm">
-            {platformLinks.map((link) => (
-              <li key={link.label}>
-                <a
-                  className="text-slate-500 hover:text-cyan-600 hover:underline transition-all"
-                  href={link.href}
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Legal & Docs */}
-        <div>
-          <h5 className="text-slate-900 font-headline font-bold text-sm mb-6">
-            משפטי ותמיכה
-          </h5>
-          <ul className="space-y-4 text-sm">
-            {legalLinks.map((link) => (
-              <li key={link.label}>
-                <a
-                  className="text-slate-500 hover:text-cyan-600 hover:underline transition-all"
-                  href={link.href}
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Command Center */}
-        <div>
-          <h5 className="text-slate-900 font-headline font-bold text-sm mb-6">
-            מרכז בקרה
-          </h5>
-          <div className="p-6 rounded-xl bg-white border border-slate-200 shadow-sm">
-            <p className="text-slate-600 text-xs mb-4 font-bold">
-              הירשמו לעדכוני טכנולוגיה ומבצעים.
+    <footer className="bg-[#0b0c10] text-white py-16">
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+          {/* Contact Section */}
+          <div className="flex flex-col items-start md:items-end order-1 md:order-4 text-right">
+            <h3 className="text-xl font-bold mb-6">מוקד Matrix לשירותכם</h3>
+            <p className="text-slate-400 text-sm mb-6 leading-relaxed">
+              א' – ה' 8:00-19:00 | ימי ו' וערבי חג 8:00-15:00
             </p>
-            <div className="flex flex-row-reverse gap-2">
-              <input
-                className="bg-slate-50 border border-slate-200 text-xs text-slate-900 rounded-lg p-3 flex-1 focus:ring-2 focus:ring-cyan-500 focus:outline-none"
-                placeholder="email@leak-tech.io"
-                type="email"
-              />
-              <button className="bg-cyan-600 text-white px-4 py-2 rounded-lg text-xs font-bold transition-all hover:bg-cyan-700 active:scale-95">
-                הצטרף
-              </button>
+            <div className="flex items-center gap-4 bg-white/5 border border-white/10 px-6 py-3 rounded-xl hover:bg-white/10 transition-colors cursor-pointer group">
+              <div className="w-2.5 h-2.5 bg-green-500 rounded-full shadow-[0_0_8px_rgba(34,197,94,0.6)]"></div>
+              <span className="text-2xl font-bold tracking-wider">050-575-0724</span>
+              <span className="material-symbols-outlined text-white/50 group-hover:text-white transition-colors">
+                call
+              </span>
             </div>
           </div>
-        </div>
-      </div>
 
-      {/* Bottom Bar */}
-      <div className="max-w-7xl mx-auto px-12 py-8 border-t border-slate-200 flex flex-col md:flex-row-reverse justify-between items-center gap-4">
-        <p className="text-slate-400 font-medium text-[11px] tracking-wider antialiased">
-          © 2024 Matrix-טכנלוגיות - איתור נזילות מתקדם. כל הזכויות שמורות.
-        </p>
-        <div className="flex flex-row-reverse items-center gap-6">
-          <span className="flex flex-row-reverse items-center gap-2 text-[10px] text-cyan-600 font-bold">
-            <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 shadow-[0_0_5px_rgba(0,229,255,0.5)]" />
-            מערכות תקינות
-          </span>
-          <span className="text-[10px] text-slate-400 font-bold uppercase">v4.0.2-STABLE</span>
+          {/* Navigation Links */}
+          <div className="text-right">
+            <h4 className="text-lg font-bold mb-8 relative inline-block after:content-[''] after:absolute after:-bottom-2 after:right-0 after:w-8 after:h-0.5 after:bg-primary">
+              ניווט
+            </h4>
+            <ul className="space-y-4">
+              {navigationLinks.map((link) => (
+                <li key={link.label}>
+                  <a className="text-slate-400 hover:text-white transition-colors text-sm" href={link.href}>
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services Links */}
+          <div className="text-right">
+            <h4 className="text-lg font-bold mb-8 relative inline-block after:content-[''] after:absolute after:-bottom-2 after:right-0 after:w-8 after:h-0.5 after:bg-secondary">
+              שירותים
+            </h4>
+            <ul className="space-y-4">
+              {servicesLinks.map((link) => (
+                <li key={link.label}>
+                  <a className="text-slate-400 hover:text-white transition-colors text-sm" href={link.href}>
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Articles Links */}
+          <div className="text-right">
+            <h4 className="text-lg font-bold mb-8 relative inline-block after:content-[''] after:absolute after:-bottom-2 after:right-0 after:w-8 after:h-0.5 after:bg-primary">
+              מאמרים
+            </h4>
+            <ul className="space-y-4">
+              {articlesLinks.map((link) => (
+                <li key={link.label}>
+                  <a className="text-slate-400 hover:text-white transition-colors text-sm" href={link.href}>
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-slate-500">
+          <div className="flex items-center gap-6">
+            <span>
+              Website by <span className="text-white font-bold">Saglix</span>
+            </span>
+          </div>
+          <div className="flex flex-wrap justify-center gap-6">
+            <a className="hover:text-white transition-colors" href="#">
+              קידום אתרים ע"י סוכנות דיגיטל SpiderWeb
+            </a>
+            <a className="hover:text-white transition-colors" href="#">
+              הצהרת נגישות
+            </a>
+            <a className="hover:text-white transition-colors" href="#">
+              כל הזכויות שמורות ל-Matrix-טכנלוגיות בע"מ ©
+            </a>
+          </div>
         </div>
       </div>
     </footer>

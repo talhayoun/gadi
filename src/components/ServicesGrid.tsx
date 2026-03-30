@@ -2,59 +2,58 @@ import ServiceCard from "./ServiceCard";
 
 const services = [
   {
-    icon: "water_drop",
-    iconColor: "text-cyan-600",
+    icon: "photo_camera",
+    iconColor: "text-primary",
     title: "איתור נזילות ובעיות רטיבות",
     description:
       "איתור מדויק של נזילות במים וביוב ללא הרס, באמצעות ציוד מתקדם וטכנולוגיות חדישות.",
     variant: "large" as const,
-    image:
-      "https://plus.unsplash.com/premium_photo-1661921394349-9e3f394d80da?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    imageAlt: "איתור נזילות מקצועי",
   },
   {
-    icon: "videocam",
-    iconColor: "text-blue-500",
+    icon: "hearing",
+    iconColor: "text-secondary",
     title: "צילום וחידוש צנרת",
     description:
       "מצלמה אופטית לבדיקת מצב הצנרת ושיקום בשיטת הפאץ' המהפכנית ללא הרס.",
     variant: "medium" as const,
-    sideIcon: "plumbing",
   },
   {
-    icon: "explore",
-    iconColor: "text-amber-600",
+    icon: "air",
+    iconColor: "text-tertiary",
     title: "איתור נזילות תת קרקעיות",
     description:
       "זיהוי נזילות מתחת לקרקע באמצעות טכנולוגיות מתקדמות כולל מצלמה תרמית.",
-    variant: "small" as const,
+    variant: "medium" as const,
   },
   {
-    icon: "home_repair_service",
-    iconColor: "text-green-600",
+    icon: "analytics",
+    iconColor: "text-secondary",
     title: "ייבוש ושיקום נזקי מים",
     description:
       "ייבוש תת רצפתי מקצועי ושיקום מלא של נזקי מים בבית או במבנה מסחרי.",
     variant: "small" as const,
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDK3V1zq-cdBrwiTzZ53G71qxoa62N1yJNNgJcwf39AjQl0xcEMJUr7vIO5sh4x4ESPTgtxPkpGay9f6FClXki8Sf1BLCu8NvmsxfG-sF6RnFlQKAQEZAiiwNKpBQUvhA8uQJ1SIY4Y6ArqMS1KijPQMOWBhXbWVyX7X7w2Q_GU34n7Ipx1_SabzyPkEj7npubmoCfLUJ6V2S5J6DusiyB51M-Hl550ZxeihEg0igHMGHUnGu_M4NmvgbGRZh6SslL_xe9j4EXeDI0",
+    imageAlt: "דוח טכני מקצועי",
   },
 ];
 
 export default function ServicesGrid() {
   return (
-    <section id="services" className="py-24 px-8 max-w-7xl mx-auto">
-      <div className="mb-16 text-right">
-        <h2 className="font-headline text-sm uppercase tracking-[0.3em] text-cyan-600 font-bold mb-4">
-          המערכת שלנו
-        </h2>
-        <h3 className="font-headline text-4xl font-extrabold text-slate-900 leading-tight">
-          פתרונות טכנולוגיים משולבים
-        </h3>
-      </div>
+    <section id="services" className="py-24 bg-surface-container-low">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-extrabold text-on-surface mb-4">השירותים המקצועיים שלנו</h2>
+          <p className="text-on-surface-variant max-w-2xl mx-auto">
+            מעטפת פתרונות טכנולוגיים לכל סוגי בעיות המים והתשתית
+          </p>
+        </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 h-auto md:h-[600px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {services.map((service) => (
           <ServiceCard key={service.title} {...service} />
         ))}
+      </div>
       </div>
     </section>
   );

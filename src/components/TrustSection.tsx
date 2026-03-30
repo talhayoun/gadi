@@ -26,7 +26,7 @@ export default function TrustSection() {
 
 
         <div className="text-right order-1 md:order-2">
-          <h2 className="font-headline text-sm uppercase tracking-[0.3em] text-cyan-600 font-bold mb-6">
+          <h2 className="font-headline text-sm uppercase tracking-[0.3em] text-primary font-bold mb-6">
             התחייבות לאיכות
           </h2>
           <h3 className="font-headline text-5xl font-extrabold text-slate-900 mb-8 leading-tight">
