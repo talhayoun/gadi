@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import ContactModal from "./ContactModal";
+import logo from "../logo.png";
 
 const navLinks = [
   { label: "בית", href: "#", active: true },
@@ -16,12 +18,17 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/70 backdrop-blur-xl rounded-full mt-3 mx-auto w-[92%] max-w-6xl shadow-[0_20px_50px_rgba(97,71,189,0.15)]">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/70 backdrop-blur-xl rounded-b-3xl md:rounded-full md:mt-3 mx-auto w-full md:w-[92%] max-w-6xl shadow-[0_20px_50px_rgba(97,71,189,0.15)]">
         <div className="flex flex-row-reverse justify-between items-center px-6 md:px-8 py-3">
           <div className="flex items-center gap-2">
-            <span className="text-xl md:text-2xl font-black bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
-              Matrix-טכנלוגיות
-            </span>
+            <Image
+              src={logo}
+              alt="Matrix-טכנלוגיות"
+              width={140}
+              height={47}
+              className="object-contain"
+              priority
+            />
           </div>
 
           <div className="hidden md:flex items-center gap-8">
@@ -80,9 +87,13 @@ export default function Navbar() {
                 >
                   <span className="material-symbols-outlined text-2xl">close</span>
                 </button>
-                <span className="text-lg font-black bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
-                  Matrix-טכנלוגיות
-                </span>
+                <Image
+                  src={logo}
+                  alt="Matrix-טכנלוגיות"
+                  width={120}
+                  height={40}
+                  className="object-contain"
+                />
               </div>
 
               {/* Navigation Links */}

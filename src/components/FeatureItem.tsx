@@ -15,10 +15,10 @@ export default function FeatureItem({
     <li className="flex flex-row-reverse items-start gap-4">
       <Icon name={icon} className="text-primary mt-1" />
       <div>
-        <span className="block text-slate-900 font-bold font-headline uppercase tracking-wider text-sm">
+        <span  className="block text-slate-900 font-bold font-headline uppercase tracking-wider text-sm">
           {title}
         </span>
-        <span className="text-sm text-slate-500">{description}</span>
+        <span style={{direction: "rtl"}} className="text-sm text-slate-500">{description}</span>
       </div>
     </li>
   );

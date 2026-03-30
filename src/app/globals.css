@@ -5,11 +5,11 @@
   --color-primary: #6147bd;
   --color-primary-container: #7b62d8;
   --color-on-primary-container: #fffdff;
-  --color-surface: #f9f9ff;
-  --color-surface-container: #ecedf6;
-  --color-surface-container-low: #f2f3fc;
-  --color-surface-container-high: #e6e8f0;
-  --color-surface-container-highest: #e0e2ea;
+  --color-surface: #f5f5fb;
+  --color-surface-container: #e8e9f2;
+  --color-surface-container-low: #eef0f8;
+  --color-surface-container-high: #e2e4ec;
+  --color-surface-container-highest: #dcdee6;
   --color-on-surface: #181c21;
   --color-on-surface-variant: #414752;
   --color-outline: #717783;
@@ -115,4 +115,59 @@ body {
   50% {
     stroke-dashoffset: 30;
   }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-from-right {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-from-left {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-in {
+  animation-fill-mode: both;
+}
+
+.fade-in {
+  animation-name: fade-in;
+}
+
+.slide-in-from-right {
+  animation-name: slide-in-from-right;
+}
+
+.slide-in-from-left {
+  animation-name: slide-in-from-left;
+}
+
+.duration-700 {
+  animation-duration: 700ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
 }

@@ -87,7 +87,7 @@ export default function HeroSection() {
                 speed
               </span>
               <span className="text-xs md:text-sm font-semibold text-on-surface text-center">
-                תגובה תוך שעות
+                100% דיוק
               </span>
             </div>
           </div>
@@ -122,11 +122,39 @@ export default function HeroSection() {
         <div className="order-2 relative">
           <div className="relative z-10 rounded-xl overflow-hidden shadow-2xl shadow-primary/10">
             <img
-
               alt="איתור נזילות מתקדם"
-              className="w-full min-h-[250px] lg:min-h-[414px]  h-auto object-cover rounded-xl"
+              className="w-full min-h-[250px] lg:min-h-[414px] h-auto object-cover rounded-xl"
               src="https://d3m9l0v76dty0.cloudfront.net/system/photos/12639273/extra_large/59e69889c8d6451b5840d98da69af447.jpg"
             />
+          </div>
+
+          {/* Company Info */}
+          <div className="mt-8 p-6 rounded-2xl bg-gradient-to-br from-white/60 to-white/40 backdrop-blur-md border border-primary/10 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl"></div>
+            <div className="relative z-10">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-1 h-8 bg-gradient-to-b from-primary to-secondary rounded-full"></div>
+                <h3 className="text-xl md:text-2xl font-bold text-on-surface">אודות Matrix-טכנלוגיות</h3>
+              </div>
+              <p className="text-on-surface-variant leading-relaxed text-sm md:text-base mb-4">
+                למעלה מ-15 שנות ניסיון באיתור וטיפול בנזילות מים. אנחנו חלוצים בשילוב טכנולוגיות מתקדמות לאיתור נזילות ללא הרס - 
+                מצלמות תרמיות, חיישנים אקוסטיים ומערכות גילוי גז.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <div className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-primary text-sm" style={{fontVariationSettings: "'FILL' 1"}}>verified</span>
+                  <span className="text-xs md:text-sm font-semibold text-on-surface">מוסמכים ומורשים</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-secondary text-sm" style={{fontVariationSettings: "'FILL' 1"}}>workspace_premium</span>
+                  <span className="text-xs md:text-sm font-semibold text-on-surface">אלפי לקוחות</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-tertiary text-sm" style={{fontVariationSettings: "'FILL' 1"}}>star</span>
+                  <span className="text-xs md:text-sm font-semibold text-on-surface">דירוג 5 כוכבים</span>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Floating Technical Stats */}
